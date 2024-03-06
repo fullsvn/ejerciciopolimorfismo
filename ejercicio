@@ -1,0 +1,52 @@
+using System;
+
+public abstract class Gato
+{
+    public virtual string Maullar()
+    {
+        return "Gato Maullando";
+    }
+
+    public abstract string Dormir();
+}
+
+public class Persa : Gato
+{
+    public override string Maullar()
+    {
+        return "Persa Maullando";
+    }
+
+    public override string Dormir()
+    {
+        return "Persa Durmiendo";
+    }
+}
+
+public class Siames : Gato
+{
+    public override string Maullar()
+    {
+        return "Siames Maullando";
+    }
+
+    public override string Dormir()
+    {
+        return "Siames Durmiendo";
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Persa persa = new Persa();
+        Siames siames = new Siames();
+
+        Console.WriteLine("Persa: " + persa.Maullar());
+        Console.WriteLine("Persa: " + persa.Dormir());
+
+        Console.WriteLine("Siames: " + siames.Maullar());
+        Console.WriteLine("Siames: " + siames.Dormir());
+    }
+}
